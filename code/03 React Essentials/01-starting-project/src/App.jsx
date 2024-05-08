@@ -1,6 +1,6 @@
 import Header from "./component/Header.jsx";
 import CoreConcepts from "./component/CoreConcepts";
-import TabButtons from "./component/TabButtons";
+import Examples from "./component/Examples";
 
 function App() {
     return (
@@ -8,7 +8,7 @@ function App() {
             <Header/>
             <main>
                 <CoreConcepts/>
-                <TabButtons/>
+                <Examples/>
                 <h2>Time to get started!</h2>
             </main>
         </div>
