@@ -1,0 +1,1 @@
+![screenshot_of_working_app.png](screenshot_of_working_app.png)
