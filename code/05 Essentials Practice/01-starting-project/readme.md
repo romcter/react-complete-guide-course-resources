@@ -1,0 +1,1 @@
+![investment_calculator.png](investment_calculator.png)
