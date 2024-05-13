@@ -1,0 +1,1 @@
+![authorization.png](authorization.png)
