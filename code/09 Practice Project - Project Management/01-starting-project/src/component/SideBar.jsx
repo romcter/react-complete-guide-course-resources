@@ -11,14 +11,14 @@ import {useState} from "react";
 
 export default function SideBar() {
     const [userInput, setUserInput] = useState({
-        name: '',
+        name: "",
         tasks: []
     });
     const [project, setProject] = useState([{name: 'test', tasks: [{task: 'one'}]}]);
 
     function handleChange(identifier, newValue) {
         setUserInput( (prevState) => {
-                return {...prevState, [identifier]: +newValue}
+                return {...prevState, [identifier]: newValue}
             }
         )
     }
