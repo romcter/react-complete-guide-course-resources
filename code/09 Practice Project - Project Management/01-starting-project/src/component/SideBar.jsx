@@ -29,10 +29,6 @@ export default function SideBar() {
             oldAr.push(userInput)
             return oldAr
         });
-
-        // setUserInput((prevUserInput) => {
-        //     return prevUserInput.push();
-        // });
     }
 
     return (
