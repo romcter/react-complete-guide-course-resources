@@ -55,26 +55,6 @@ export default function SideBar() {
     }
 
     function deleteProject(nameForDelete) {
-    //     let con ;
-    // project.map((item, index) => {
-    //         if (item.name === nameForDelete) {
-                console.log(project.filter(proj => proj.name !== nameForDelete))
-    //             con = project.splice(index, 1)
-    //         }
-    //     })
-    //
-    //     setProject((prev) => {
-    //         prev.map((item, index) => {
-    //             if (item.name === nameForDelete) {
-    //                 console.log('test')
-    //                 console.log(prev.splice(index, 1))
-    //             }
-    //         })
-    //
-    //     })
-
-
-
         setProject((oldValues) => {
             return oldValues.filter(proj => proj.name !== nameForDelete)
         })
