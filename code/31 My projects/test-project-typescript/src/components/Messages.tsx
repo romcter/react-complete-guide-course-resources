@@ -2,10 +2,14 @@ import React, {useRef} from "react";
 import {useDispatch } from 'react-redux';
 import {messageActions} from "../store/message-slice";
 import { useNavigate} from "react-router-dom";
+import { useSelector } from 'react-redux';
 
 import classes from "./Messages.module.css";
 
 const Messages: React.FC<{}> = () => {
+    // @ts-ignore
+    const messageItems = useSelector((state) => state.message.messages);
+
     const dispatch = useDispatch();
     const textRef = useRef<HTMLInputElement>(null);
 
@@ -17,7 +21,6 @@ const Messages: React.FC<{}> = () => {
 
     const handleSubmit = (e: { preventDefault: () => void; }) => {
         e.preventDefault();
-        console.log('First Name:', textRef.current?.value);
 
         dispatch(
             messageActions.sendMessage({
@@ -27,6 +30,13 @@ const Messages: React.FC<{}> = () => {
     };
 
     return <>
+        {messageItems.map((message: { id: string; text: string }) => (
+            <li key={message.id}>
+                        <h2>{message.text}</h2>
+                        <time>{message.id}</time>
+            </li>
+        ))}
+
         <form onSubmit={handleSubmit}>
             <p>
                 {/*<label htmlFor="text">Text you message</label>*/}
