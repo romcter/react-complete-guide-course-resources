@@ -17,6 +17,7 @@ const router = createBrowserRouter([
             {
                 path: 'messages',
                 element: <Messages/>,
+                // action: sendMessage
                 // children: [
                 //   {
                 //     index: true,
