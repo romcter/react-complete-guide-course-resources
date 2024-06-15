@@ -24,6 +24,7 @@ const Messages: React.FC<{}> = () => {
 
         dispatch(
             messageActions.sendMessage({
+                // @ts-ignore
                 text: textRef.current?.value
             })
         );
